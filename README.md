@@ -38,13 +38,13 @@ Add a short message like “Please review game logic”
 Once your team reviews,
 merge it into main
 
-3. Test push/pull once
+Test push/pull once
 Each team member should try this:
 Make a small change (like edit README)
 Push it to their own branch
 Create a pull request
 Merge it and check it shows up in main
-This confirms everything works :white_check_mark:
+This confirms everything works 
 
 
 Please send any questions on Slack if you need more clarifications.
