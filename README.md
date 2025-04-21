@@ -20,9 +20,13 @@ https://github.com/StephSegaW/HangmanGroupProject
 
 :white_check_mark: Each person works in their own branch
 Example names:
+
 feature/game-logic -
+
 feature/userdata - Steph
+
 feature/file-handling - 
+
 feature/ui - Oksana
 
 How to create your branch:
