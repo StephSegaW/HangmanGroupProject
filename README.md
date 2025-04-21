@@ -30,7 +30,7 @@ feature/file-handling -
 feature/ui - Oksana
 
 
-How to create your branch example:
+- How to create your branch example:
 
 gitbash
 
@@ -49,7 +49,7 @@ Add a short message like “Please review game logic”
 Once your team reviews, merge it into main
 
 
-Test push/pull once
+- Test push/pull once
 
 Each team member should try this:
 
