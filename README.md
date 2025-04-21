@@ -18,7 +18,7 @@ git clone
 https://github.com/StephSegaW/HangmanGroupProject
 
 
-:white_check_mark: Each person works in their own branch
+Each person works in their own branch
 Example names:
 
 feature/game-logic -
@@ -29,25 +29,38 @@ feature/file-handling -
 
 feature/ui - Oksana
 
-How to create your branch:
+
+How to create your branch example:
+
 gitbash
+
 git checkout -b feature/game-logic
 
-:white_check_mark: Create a Pull Request (PR)
+Create a Pull Request (PR)
+
 After pushing your branch to GitHub:
-Go to
-GitHub.com
+
+Go to GitHub.com
+
 Click “Compare & Pull Request”
+
 Add a short message like “Please review game logic”
-Once your team reviews,
-merge it into main
+
+Once your team reviews, merge it into main
+
 
 Test push/pull once
+
 Each team member should try this:
+
 Make a small change (like edit README)
+
 Push it to their own branch
+
 Create a pull request
+
 Merge it and check it shows up in main
+
 This confirms everything works 
 
 
