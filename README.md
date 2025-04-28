@@ -47,7 +47,7 @@ Using Python to create a Hangman Game.
 ---
 
 ## ✅ 3. Notify Team
-# After pushing your branch to GitHub:
+## After pushing your branch to GitHub:
  - Open the Repository on GitHub 
  - Create a Pull Request
  - Add a short message like “Please review game logic”
