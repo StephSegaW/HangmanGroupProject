@@ -54,7 +54,8 @@ Using Python to create a Hangman Game.
  - Once your team reviews and there are no merge conflicts, we will merge it into main
 
 
-We should do a Test push/pull once
-This confirms everything works 
+## **We should do a Test push/pull once to confirm everything works**
 
-Please send any questions on Slack if you need more clarifications.
+## Additional Help
+- [Intro to Github Repository with VS Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)
+- Please send any questions on Slack if you need more clarifications.
