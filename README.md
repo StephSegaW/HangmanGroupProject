@@ -27,6 +27,9 @@ Using Python to create a Hangman Game.
 ---
 
 ## ✅ 2. Work on Your Branch
+### Main Branch (official stage)
+### Dev Branch (testing stage)
+### Your Branch
 - feature/game-logic - Ramia
 - feature/userdata - Steph
 - feature/file-handling - Magda
