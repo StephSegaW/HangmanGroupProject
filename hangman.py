@@ -13,3 +13,4 @@ def get_word(): # Selects a random word from the word list
 def save_score(score, filename='userdata.txt'): # Needs userdata.txt to be created - Magda
     with open(filename, 'a') as file: # Opens the file in append mode
         file.write(f"{score}\n") # Appends the score to the userdata file
+
