@@ -12,8 +12,8 @@
 ### Random for random word selection
 import random 
 from file_handling import get_word
-from ui_handling import menu_user_options
-from gamelogic_handling import welcome_user
+from ui_handling import menu_user_options, graceful_exit
+from gamelogic_handling import welcome_user, hangman_game
 
 
 ### Hangman Drawing
@@ -23,12 +23,16 @@ from gamelogic_handling import welcome_user
 ### Word selection
 ### Initial game setup
 
-### Main game loop
+### MAIN GAME LOOP
+welcome_user() #welcome user to hangman / gamelogic handling
+user_choice = menu_user_options() # display menu options / UI handling file
+if user_choice == "Start Game":
+    hangman_game() # start the game / gamelogic handling file
+if user_choice == "View Leaderboard":
+    view_leaderboard() # view the leaderboard / userdata handling file
+if user_choice == "Exit":
+    graceful_exit() # exit the game / UI handling file
 
-welcome_user() #welcome user to hangman
-user_choice = menu_user_options() # display menu options, show the user options
-# Oksana will finish the if statement for the menu options
-graceful_exit()
 
 
 
