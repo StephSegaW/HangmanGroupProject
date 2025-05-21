@@ -5,48 +5,120 @@ def welcome_user():
     print("Welcome to Hangman!")
     return 
 
-from draw import draw_hangman # This will draw the hangman when needed
+
+# ---- DRAW FUNCTION (stub) ----
+def draw_hangman(stage):
+    print(f"[HANGMAN STAGE {stage}]")  # Replace with actual drawing if needed
+
+# ---- USERDATA HANDLING (stub) ----
+def save_score(username, result):
+    print(f"(Score saved for {username}: {result})")
+
+def show_leaderboard():
+    print("(Leaderboard feature coming soon!)")
+
+# ---- GAME CLASS ----
 class HangmanGame:
-    def __init__(self, word, max_attempts=8): # Initialize the game with a word and max attempts
+    def __init__(self, word, max_attempts=8):
         self.word = word.lower()
         self.max_attempts = max_attempts
         self.correct_guesses = set()
         self.incorrect_guesses = set()
+
     def guess_letter(self, letter):
         letter = letter.lower()
-        # check if input is valid
         if not letter.isalpha() or len(letter) != 1:
             return "Invalid input. Please enter a single letter."
-        # check for repeated guesses
         if letter in self.correct_guesses or letter in self.incorrect_guesses:
             return f"You already guessed '{letter}'."
-        # check if the letter is correct
         if letter in self.word:
-            self.corrects_guesses.add(letter)
-            return f"Good job! '{letter}' is in the word."
+            self.correct_guesses.add(letter)
+            return f"✅ Good job! '{letter}' is in the word."
         else:
             self.incorrect_guesses.add(letter)
             draw_hangman(len(self.incorrect_guesses))
-            return f"Sorry, '{letter}' is not in the word."
+            return f"❌ Sorry, '{letter}' is not in the word."
+
     def generate_word_display(self):
-        # Show the word with guessed letters and _ for the rest
         return " ".join([letter if letter in self.correct_guesses else "_" for letter in self.word])
+
     def is_word_guessed(self):
-        # Check if all letters in the word are guessed
-        return all(letter in self.corrects_guesses for letter in self.word)
+        return all(letter in self.correct_guesses for letter in self.word)
+
     def remaining_attempts(self):
         return self.max_attempts - len(self.incorrect_guesses)
+
     def is_game_over(self):
-        # Game ends if the word is guessed () or no more attempts
         return self.is_word_guessed() or self.remaining_attempts() <= 0
+
     def get_incorrect_guesses(self):
-        return sorted(self.correct_guesses)
+        return sorted(self.incorrect_guesses)
+
     def get_result(self):
         if self.is_word_guessed():
             return "Win"
         elif self.remaining_attempts() <= 0:
-            return "loss"
-        return "in progress"
+            return "Loss"
+        return "In Progress"
+
+# ---- GAME RUNNER FUNCTION ----
+def load_word_list(filename="word_list.txt"): #get word list from file
+    try:
+        with open(filename, "r") as file:
+            return [line.strip() for line in file if line.strip()]
+    except FileNotFoundError:
+        print("⚠️ word_list.txt not found. Using default word list.")
+        return ["laptop", "pencil", "book"]
+
+def get_word():
+    word_list = load_word_list()
+    return random.choice(word_list)
+
+
+def hangman_game():
+    print("🎮 Welcome to Hangman!")
+    username = input("Enter your name: ")
+
+    while True:
+        word = get_word()
+        game = HangmanGame(word)
+
+        print("\nThe word has", len(word), "letters.")
+        print(game.generate_word_display())
+
+        while not game.is_game_over():
+            guess = input("Guess a letter: ")
+            print(game.guess_letter(guess))
+            print("Word:", game.generate_word_display())
+            print("Incorrect guesses:", game.get_incorrect_guesses())
+            print("Attempts remaining:", game.remaining_attempts())
+            print()
+
+        print("\n✅ Game Over!")
+        print("The word was:", game.word)
+        result = game.get_result()
+
+        if result == "Win":
+            print("🎉 You guessed the word!")
+        else:
+            print("💀 You ran out of attempts. Better luck next time.")
+
+        save_score(username, result)
+
+        choice = input("\nPlay again (P), Show leaderboard (L), or Quit (Q)? ").upper()
+        if choice == "L":
+            show_leaderboard()
+        elif choice == "Q":
+            print("👋 Goodbye!")
+            break
+
+# ---- RUN THE GAME ----
+if __name__ == "__main__": #
+    hangman_game() 
+
+
+
+#---------------------------------------------------------------------------------------------
 
 
 
