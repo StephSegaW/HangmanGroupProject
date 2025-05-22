@@ -1,0 +1,17 @@
+Bob,Loss,16.61s
+Bob,Loss,89.53s
+Bob,Loss,7.75s
+Bobby,Loss,6.29s
+Bobbyboy,Loss,9.26s
+BobbyBob,Loss,10.62s
+Bobbyboy,Loss,16.09s
+Boby,Win,99.01s
+bobbby,Win,33.42s
+Boby,Loss,19.14s
+Boooo,Loss,30.27s
+bobbby,Win,40.06s
+bobbyy,Win,795.54s
+bb,Loss,23.83s
+bbb,Loss,24.28s
+Dude,Loss,15.99s
+dude,Loss,9.21s
