@@ -12,9 +12,13 @@ def load_word_list(filename = "word_list.txt"):
         print(f"Error: The file {filename} was not found.")
         return []
     
-def save_to_leaderboard(username, filename = "leaderboard.txt"):
+def save_to_leaderboard(user, filename = "leaderboard.txt"):
     with open(filename, 'a') as file:
-        file.write(f"{user.username}, {user.result}, {user.duration}s\\n")
+        file.write(f"{user.username}, {user.result}, {user.duration}s\\n") 
+
+# Magda: Instead of username, the function should take the entire user object, since it uses its attributes.
+
+
 
 def view_leaderboard(filename = "leaderboard.txt"):
    print("Leaderboard:")
