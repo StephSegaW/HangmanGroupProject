@@ -27,3 +27,6 @@ gog,Loss,43.57s
 maggylou,Win,14.30s
 maggylou,Win,19.82s
 loser,Loss,9.16s
+MagdaRem,Win,46.31s
+MagdaRemb,Win,12.50s
+1,Loss,40.73s
