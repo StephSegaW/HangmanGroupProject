@@ -11,6 +11,7 @@
 
 # ISSUE - you are welcome to fix
 ## in def main_menu, it does not loop back after input error. Example: user input - sdfjsalk, app closes and not return to main menu option
+## FIXED with if statement and return to main_menu()! YAY!
 
 
 
@@ -28,6 +29,9 @@ def main_menu():
     print("2. View Leaderboard")
     print("3. Exit")
     choice = input("Choose an option (1-3): ")
+    if choice not in ["1", "2", "3"]:
+        print("Invalid input. Please try again.")
+        return main_menu()
     if choice == "1": # Play Hangman
         username = input("Enter your name: ")
         word = load_words_from_file().upper() # random is imported in file_handling.py
