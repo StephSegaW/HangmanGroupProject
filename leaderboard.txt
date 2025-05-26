@@ -15,3 +15,15 @@ bb,Loss,23.83s
 bbb,Loss,24.28s
 Dude,Loss,15.99s
 dude,Loss,9.21s
+bobby,Loss,80.54s
+magda,Loss,97.64s
+mag,Loss,38.80s
+maggy,Loss,7.91s
+ray,Loss,55.51s
+mags,Loss,26.23s
+kasia,Loss,77.54s
+maggggyyy,Loss,18.10s
+gog,Loss,43.57s
+maggylou,Win,14.30s
+maggylou,Win,19.82s
+loser,Loss,9.16s

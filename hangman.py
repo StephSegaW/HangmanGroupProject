@@ -47,11 +47,18 @@ def main_menu():
 def ask_play_again():
     print( "\n======= GOODGAME =======")
     print("1. Return to Main Menu")
-    print("2. Exit")
-    choice = input("Return to Main Menu or Exit (1-2): ")
+    print("2. Play Again")
+    print("3. Exit")
+    choice = input("Return to Main Menu or Exit (1-3): ")
     if choice == "1":
         return main_menu()  # Restart the game
     elif choice == "2":
+        username = input("Enter your name: ")
+        word = load_words_from_file().upper() # random is imported in file_handling.py
+        result, duration = play_hangman(username, word) # username and word are passed to play_hangman function
+        save_to_leaderboard(username, result, duration) # The result and duration are passed to save_to_leaderboard function
+        return ask_play_again()  # Play again with the same username and word
+    elif choice == "3":
         print("👋 Thanks for playing! Goodbye.")
         return
     else:
