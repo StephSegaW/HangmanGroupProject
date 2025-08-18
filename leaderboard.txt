@@ -30,3 +30,7 @@ loser,Loss,9.16s
 MagdaRem,Win,46.31s
 MagdaRemb,Win,12.50s
 1,Loss,40.73s
+roger,Win,532.44s
+guy,Loss,10.14s
+anders,Loss,189.64s
+Bobby,Loss,9.70s
